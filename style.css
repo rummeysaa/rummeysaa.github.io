@@ -462,6 +462,44 @@ h2::after {
     border: 1px solid rgba(183, 148, 244, 0.35);
 }
 
+/* Project Details - Projeyi Incele toggle */
+.project-details {
+    margin-top: auto;
+}
+
+.project-details summary.view-btn {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(156, 178, 194, 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+.project-details summary.view-btn::-webkit-details-marker {
+    display: none;
+}
+
+.project-details summary.view-btn:hover,
+.project-details[open] summary.view-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.project-desc {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1rem;
+}
+
 /* Project Description Toggle - Pure HTML details/summary */
 .project-desc-toggle {
     background-color: rgba(255, 255, 255, 0.04);
