@@ -629,35 +629,38 @@ h2::after {
 /* Skill Bubbles (Simple text pills) */
 .skill-tag {
     display: inline-block;
-    padding: 0.6rem 1.5rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.65rem 1.6rem;
+    background-color: rgba(99, 179, 237, 0.1);
+    color: #63b3ed;
+    border: 1.5px solid rgba(99, 179, 237, 0.4);
     border-radius: 50px;
-    color: var(--text-color);
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
     white-space: nowrap;
     transition: all 0.3s ease;
     cursor: default;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .skill-tag:hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(99, 179, 237, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(99, 179, 237, 0.4);
 }
 
 .skill-tag.alt {
-    border-color: rgba(183, 148, 244, 0.3);
+    background-color: rgba(183, 148, 244, 0.1);
+    color: #b794f4;
+    border-color: rgba(183, 148, 244, 0.4);
 }
 
 .skill-tag.alt:hover {
     background-color: #b794f4;
     border-color: #b794f4;
-    box-shadow: 0 8px 25px rgba(183, 148, 244, 0.3);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(183, 148, 244, 0.4);
 }
 
 /* Contact Section & Footer */
