@@ -1,18 +1,18 @@
-/* Modern Dark Theme Variables */
+/* Modern Premium Dark Theme Variables (Emerald) */
 :root {
-    --bg-color: #0f172a;
-    /* Slate 900 */
+    --bg-color: #0b1120;
+    /* Sleeker, deeper dark blue/slate */
     --surface-color: #1e293b;
     /* Slate 800 */
-    --primary-color: #3b82f6;
-    /* Blue 500 */
-    --primary-hover: #2563eb;
-    /* Blue 600 */
+    --primary-color: #10b981;
+    /* Emerald 500 - Premium vivid green/teal */
+    --primary-hover: #059669;
+    /* Emerald 600 */
     --text-color: #f8fafc;
     /* Slate 50 */
     --text-muted: #94a3b8;
     /* Slate 400 */
-    --nav-bg: rgba(15, 23, 42, 0.85);
+    --nav-bg: rgba(11, 17, 32, 0.85);
 }
 
 /* Global Reset & Base Styles */
@@ -143,7 +143,7 @@ h2::after {
 
 .role-badge {
     display: inline-block;
-    background-color: rgba(59, 130, 246, 0.15);
+    background-color: rgba(16, 185, 129, 0.15);
     /* Light blue background */
     color: var(--primary-color);
     padding: 0.5rem 1.2rem;
@@ -151,7 +151,7 @@ h2::after {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 2.5rem;
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .profile-img-container {
@@ -166,7 +166,7 @@ h2::after {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--primary-color);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
     background-color: var(--surface-color);
     /* Fallback when image is missing */
 }
@@ -258,13 +258,13 @@ h2::after {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(59, 130, 246, 0.3);
+    border-color: rgba(16, 185, 129, 0.3);
 }
 
 .card-icon {
     font-size: 3rem;
     color: var(--primary-color);
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(16, 185, 129, 0.1);
     padding: 1rem;
     border-radius: 50%;
 }
@@ -305,7 +305,7 @@ h2::after {
 
 .project-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(59, 130, 246, 0.3);
+    border-color: rgba(16, 185, 129, 0.3);
 }
 
 .project-card h3 {
@@ -322,7 +322,7 @@ h2::after {
 .view-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: rgba(16, 185, 129, 0.1);
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
