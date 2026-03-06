@@ -583,14 +583,14 @@ h2::after {
 
 .marquee-items {
     display: flex;
-    gap: 1rem;
-    padding: 0 0.5rem;
+    gap: 1.5rem;
+    padding: 0 0.75rem;
     flex-shrink: 0;
 }
 
 /* LEFT scroll animation */
 .marquee-left {
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 40s linear infinite;
 }
 
 .marquee-left:hover {
@@ -599,7 +599,7 @@ h2::after {
 
 /* RIGHT scroll animation */
 .marquee-right {
-    animation: scroll-right 20s linear infinite;
+    animation: scroll-right 40s linear infinite;
 }
 
 .marquee-right:hover {
