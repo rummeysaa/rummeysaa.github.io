@@ -178,14 +178,11 @@ h2::after {
     background-color: var(--bg-color);
 }
 
-.profile-img-hero {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.7);
-    /* Heavily zoomed to ensure no original crop borders are seen */
-    transform-origin: center 48%;
-    /* Centered on the face */
+.profile-icon-hero {
+    font-size: 6rem;
+    /* Adjust size to fit in circle */
+    color: var(--primary-color);
+    filter: drop-shadow(0 0 10px rgba(99, 179, 237, 0.5));
 }
 
 .social-links {
