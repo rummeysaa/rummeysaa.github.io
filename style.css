@@ -1,18 +1,23 @@
-/* Modern Premium Dark Theme Variables (Emerald) */
+/* Premium Dark Blue Theme with Cyan Accents & White Glows */
 :root {
-    --bg-color: #0b1120;
-    /* Sleeker, deeper dark blue/slate */
-    --surface-color: #1e293b;
-    /* Slate 800 */
-    --primary-color: #10b981;
-    /* Emerald 500 - Premium vivid green/teal */
-    --primary-hover: #059669;
-    /* Emerald 600 */
+    --bg-color: #020617;
+    /* Very deep dark blue */
+    --surface-color: #0f172a;
+    /* Slightly lighter deep blue for cards */
+    --primary-color: #0ea5e9;
+    /* Elegant Sky Blue / Cyan (Not green, not white) */
+    --primary-hover: #0284c7;
+    /* Darker Cyan for hover */
     --text-color: #f8fafc;
-    /* Slate 50 */
-    --text-muted: #94a3b8;
-    /* Slate 400 */
-    --nav-bg: rgba(11, 17, 32, 0.85);
+    /* Standard white text */
+    --text-muted: #cbd5e1;
+    /* Lighter slate text */
+    --nav-bg: rgba(2, 6, 23, 0.85);
+    /* Transparent deep blue */
+
+    /* The requested white glows */
+    --white-glow-box: 0 0 15px rgba(255, 255, 255, 0.15);
+    --white-glow-text: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 /* Global Reset & Base Styles */
@@ -35,12 +40,20 @@ body {
     overflow-x: hidden;
 }
 
-/* Typography */
+/* Typography with White Text Glow */
 h1,
 h2,
 h3 {
     font-weight: 800;
     line-height: 1.2;
+    text-shadow: var(--white-glow-text);
+}
+
+p,
+span,
+a,
+address {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
 h2 {
@@ -73,13 +86,16 @@ h2::after {
     background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--white-glow-box);
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    /* Cyan glow for logo */
 }
 
 .nav-links {
@@ -130,28 +146,30 @@ h2::after {
 }
 
 .hero h1 span {
-    color: #ffffff;
-    /* User requested "Rümeysa Kaplan" to be white */
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    /* Matching cyan glow */
 }
 
 .hero .subtitle {
     font-size: 1.5rem;
-    color: var(--text-muted);
+    color: var(--text-color);
+    /* Brightened so white glow shows */
     margin-bottom: 1.5rem;
-    /* Reduced to make room for badge */
 }
 
 .role-badge {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.15);
-    /* Light blue background */
+    background-color: rgba(14, 165, 233, 0.15);
+    /* Cyan tint */
     color: var(--primary-color);
     padding: 0.5rem 1.2rem;
     border-radius: 2rem;
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 2.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    text-shadow: none;
 }
 
 .profile-img-container {
@@ -166,9 +184,10 @@ h2::after {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--primary-color);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    /* Cyan border */
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+    /* Cyan outer glow */
     background-color: var(--surface-color);
-    /* Fallback when image is missing */
 }
 
 .social-links {
@@ -195,7 +214,7 @@ h2::after {
     left: 50%;
     transform: translateX(-50%);
     font-size: 2.5rem;
-    color: var(--text-muted);
+    color: var(--text-color);
     animation: bounce 2s infinite;
 }
 
@@ -228,20 +247,8 @@ h2::after {
 
 .about-text p {
     font-size: 1.1rem;
-    color: var(--text-muted);
+    color: var(--text-color);
     margin-bottom: 1rem;
-}
-
-.about-image-placeholder {
-    background-color: var(--surface-color);
-    height: 300px;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-muted);
-    border: 2px dashed rgba(255, 255, 255, 0.1);
 }
 
 /* Education Section */
@@ -253,18 +260,21 @@ h2::after {
     align-items: flex-start;
     gap: 1.5rem;
     transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--white-glow-box);
+    /* White glow card template */
 }
 
 .card:hover {
     transform: translateY(-5px);
     border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
 }
 
 .card-icon {
     font-size: 3rem;
     color: var(--primary-color);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(14, 165, 233, 0.1);
     padding: 1rem;
     border-radius: 50%;
 }
@@ -276,7 +286,7 @@ h2::after {
 
 .card-info .degree {
     font-size: 1.1rem;
-    color: var(--text-muted);
+    color: var(--text-color);
 }
 
 .card-info .date {
@@ -284,6 +294,7 @@ h2::after {
     color: var(--primary-color);
     font-weight: 600;
     margin-top: 0.5rem;
+    text-shadow: none;
 }
 
 /* Projects Section */
@@ -298,7 +309,9 @@ h2::after {
     padding: 2rem;
     border-radius: 1rem;
     transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--white-glow-box);
+    /* White glow background template */
     display: flex;
     flex-direction: column;
 }
@@ -306,6 +319,7 @@ h2::after {
 .project-card:hover {
     transform: translateY(-10px);
     border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
 }
 
 .project-card h3 {
@@ -314,7 +328,7 @@ h2::after {
 }
 
 .project-card p {
-    color: var(--text-muted);
+    color: var(--text-color);
     margin-bottom: 2rem;
     flex-grow: 1;
 }
@@ -322,13 +336,14 @@ h2::after {
 .view-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(14, 165, 233, 0.1);
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
     border-radius: 0.5rem;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-shadow: none;
 }
 
 .project-card:hover .view-btn {
@@ -347,7 +362,9 @@ h2::after {
     border-radius: 1rem;
     font-style: normal;
     font-size: 1.1rem;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--white-glow-box);
+    /* White glow background template */
 }
 
 .contact-box p {
@@ -355,7 +372,7 @@ h2::after {
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: var(--text-muted);
+    color: var(--text-color);
 }
 
 .contact-box p:last-child {
