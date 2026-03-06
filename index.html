@@ -20,13 +20,19 @@
     <nav class="navbar">
         <div class="logo">RK</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="lang-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+            <li><a href="#about" class="lang-text" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+            <li><a href="#education" class="lang-text" data-tr="Eğitim" data-en="Education">Eğitim</a></li>
+            <li><a href="#projects" class="lang-text" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+            <li><a href="#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a></li>
         </ul>
     </nav>
+
+    <!-- Floating Language Selector (Positioned below navbar) -->
+    <div class="floating-lang-toggle">
+        <button id="btn-tr" class="lang-btn active">🇹🇷 TR</button>
+        <button id="btn-en" class="lang-btn">🇬🇧 EN</button>
+    </div>
 
     <!-- Home Section -->
     <section id="home" class="section hero">
@@ -34,9 +40,14 @@
             <div class="profile-img-container fade-in">
                 <img src="profile.png" alt="Rümeysa Kaplan" class="profile-img-hero">
             </div>
-            <h1 class="fade-in delay-1"> <span>Rümeysa Kaplan</span></h1>
-            <p class="subtitle fade-in delay-2">Software Engineer | Data Science & Database Systems</p>
-            <div class="role-badge fade-in delay-2">Yazılım Mühendisliği 3. Sınıf</div>
+            <h1 class="fade-in delay-1"><span class="lang-text" data-tr="Merhaba, Ben" data-en="Hi, I'm">Merhaba,
+                    Ben</span> <span style="text-shadow: var(--white-glow-text);">Rümeysa Kaplan</span></h1>
+            <p class="subtitle fade-in delay-2 lang-text"
+                data-tr="Yazılım Mühendisi | Veri Bilimi & Veritabanı Sistemleri"
+                data-en="Software Engineer | Data Science & Database Systems">Yazılım Mühendisi | Veri Bilimi &
+                Veritabanı Sistemleri</p>
+            <div class="role-badge fade-in delay-2 lang-text" data-tr="Yazılım Mühendisliği 3. Sınıf"
+                data-en="Software Engineering 3rd Year">Yazılım Mühendisliği 3. Sınıf</div>
             <div class="social-links fade-in delay-3">
                 <a href="#" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
                 <a href="#" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
@@ -51,11 +62,15 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="section-content">
-            <h2 class="slide-up">About Me</h2>
+            <h2 class="slide-up lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
             <div class="about-grid slide-up delay-1" style="grid-template-columns: 1fr;">
                 <div class="about-text">
-                    <p>I am passionate about crafting beautiful, intuitive, and dynamic user interfaces. I specialize in
-                        front-end development and love turning complex problems into simple, elegant solutions.</p>
+                    <p class="lang-text"
+                        data-tr="Güzel, sezgisel ve dinamik kullanıcı arayüzleri oluşturma konusunda tutkuluyum. Ön Yüz (Front-end) web geliştirme alanında uzmanlaşıyor ve karmaşık problemleri basit, zarif çözümlere dönüştürmeyi seviyorum."
+                        data-en="I am passionate about crafting beautiful, intuitive, and dynamic user interfaces. I specialize in front-end development and love turning complex problems into simple, elegant solutions.">
+                        Güzel, sezgisel ve dinamik kullanıcı arayüzleri oluşturma konusunda tutkuluyum. Ön Yüz
+                        (Front-end) web geliştirme alanında uzmanlaşıyor ve karmaşık problemleri basit, zarif çözümlere
+                        dönüştürmeyi seviyorum.</p>
                 </div>
             </div>
         </div>
@@ -64,13 +79,14 @@
     <!-- Education Section -->
     <section id="education" class="section">
         <div class="section-content">
-            <h2 class="slide-up">Education</h2>
+            <h2 class="slide-up lang-text" data-tr="Eğitim" data-en="Education">Eğitim</h2>
             <div class="card slide-up delay-1">
                 <div class="card-icon"><ion-icon name="school-outline"></ion-icon></div>
                 <div class="card-info">
-                    <h3>University Name</h3>
-                    <p class="degree">Degree, Field of Study</p>
-                    <p class="date">Graduation Year</p>
+                    <h3 class="lang-text" data-tr="Üniversite Adı" data-en="University Name">Üniversite Adı</h3>
+                    <p class="degree lang-text" data-tr="Bölüm, Fakülte" data-en="Degree, Field of Study">Bölüm, Fakülte
+                    </p>
+                    <p class="date lang-text" data-tr="Mezuniyet Yılı" data-en="Graduation Year">Mezuniyet Yılı</p>
                 </div>
             </div>
         </div>
@@ -79,17 +95,25 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="section-content">
-            <h2 class="slide-up">Projects</h2>
+            <h2 class="slide-up lang-text" data-tr="Projeler" data-en="Projects">Projeler</h2>
             <div class="projects-grid">
                 <div class="project-card slide-up delay-1">
-                    <h3>Project Name 1</h3>
-                    <p>A brief description of what this project does and the technologies used.</p>
-                    <a href="#" class="view-btn">View Project</a>
+                    <h3 class="lang-text" data-tr="Proje Adı 1" data-en="Project Name 1">Proje Adı 1</h3>
+                    <p class="lang-text"
+                        data-tr="Bu projenin ne yaptığına ve kullanılan teknolojilere dair kısa bir açıklama."
+                        data-en="A brief description of what this project does and the technologies used.">Bu projenin
+                        ne yaptığına ve kullanılan teknolojilere dair kısa bir açıklama.</p>
+                    <a href="#" class="view-btn lang-text" data-tr="Projeyi İncele" data-en="View Project">Projeyi
+                        İncele</a>
                 </div>
                 <div class="project-card slide-up delay-2">
-                    <h3>Project Name 2</h3>
-                    <p>A brief description of what this project does and the technologies used.</p>
-                    <a href="#" class="view-btn">View Project</a>
+                    <h3 class="lang-text" data-tr="Proje Adı 2" data-en="Project Name 2">Proje Adı 2</h3>
+                    <p class="lang-text"
+                        data-tr="Bu projenin ne yaptığına ve kullanılan teknolojilere dair kısa bir açıklama."
+                        data-en="A brief description of what this project does and the technologies used.">Bu projenin
+                        ne yaptığına ve kullanılan teknolojilere dair kısa bir açıklama.</p>
+                    <a href="#" class="view-btn lang-text" data-tr="Projeyi İncele" data-en="View Project">Projeyi
+                        İncele</a>
                 </div>
             </div>
         </div>
@@ -98,18 +122,24 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="section-content">
-            <h2 class="slide-up">Get In Touch</h2>
+            <h2 class="slide-up lang-text" data-tr="İletişim" data-en="Get In Touch">İletişim</h2>
             <address class="contact-box slide-up delay-1">
-                <p><strong><ion-icon name="location-outline"></ion-icon> Location:</strong> Your City, Turkey</p>
-                <p><strong><ion-icon name="mail-outline"></ion-icon> Email:</strong> <a
+                <p><strong><ion-icon name="location-outline"></ion-icon> <span class="lang-text" data-tr="Konum:"
+                            data-en="Location:">Konum:</span></strong> <span class="lang-text"
+                        data-tr="Şehriniz, Türkiye" data-en="Your City, Turkey">Şehriniz, Türkiye</span></p>
+                <p><strong><ion-icon name="mail-outline"></ion-icon> <span class="lang-text" data-tr="E-posta:"
+                            data-en="Email:">E-posta:</span></strong> <a
                         href="mailto:email@example.com">email@example.com</a></p>
-                <p><strong><ion-icon name="globe-outline"></ion-icon> Website:</strong> <a
-                        href="https://rummeysaa.github.io/" target="_blank">rummeysaa.github.io</a></p>
+                <p><strong><ion-icon name="globe-outline"></ion-icon> <span class="lang-text" data-tr="Web Sitesi:"
+                            data-en="Website:">Web Sitesi:</span></strong> <a href="https://rummeysaa.github.io/"
+                        target="_blank">rummeysaa.github.io</a></p>
             </address>
         </div>
 
         <footer>
-            <p>&copy; 2024 Rümeysa Kaplan. Built with passion.</p>
+            <p class="lang-text" data-tr="&copy; 2024 Rümeysa Kaplan. Tutkuyla geliştirildi."
+                data-en="&copy; 2024 Rümeysa Kaplan. Built with passion.">&copy; 2024 Rümeysa Kaplan. Tutkuyla
+                geliştirildi.</p>
         </footer>
     </section>
 
@@ -118,6 +148,40 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script>
+        // Language Toggle Logic
+        const btnTr = document.getElementById('btn-tr');
+        const btnEn = document.getElementById('btn-en');
+        const langElements = document.querySelectorAll('.lang-text');
+
+        // Check local storage for preferred language
+        const currentLang = localStorage.getItem('lang') || 'tr';
+        if (currentLang === 'en') {
+            setLanguage('en');
+        } else {
+            setLanguage('tr');
+        }
+
+        btnTr.addEventListener('click', () => setLanguage('tr'));
+        btnEn.addEventListener('click', () => setLanguage('en'));
+
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+
+            // Update button styles
+            if (lang === 'tr') {
+                btnTr.classList.add('active');
+                btnEn.classList.remove('active');
+            } else {
+                btnEn.classList.add('active');
+                btnTr.classList.remove('active');
+            }
+
+            // Update text
+            langElements.forEach(el => {
+                el.innerHTML = el.getAttribute(lang === 'tr' ? 'data-tr' : 'data-en');
+            });
+        }
+
         // Intersection Observer for Scroll Animations
         const observerOptions = {
             root: null,
