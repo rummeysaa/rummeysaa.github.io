@@ -414,6 +414,104 @@ h2::after {
     color: #fff;
 }
 
+/* Tech Bubbles */
+.tech-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.tech-bubble {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.tech-bubble:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tech-bubble.frontend {
+    background-color: rgba(99, 179, 237, 0.15);
+    color: #63b3ed;
+    border: 1px solid rgba(99, 179, 237, 0.35);
+}
+
+.tech-bubble.backend {
+    background-color: rgba(104, 211, 145, 0.15);
+    color: #68d391;
+    border: 1px solid rgba(104, 211, 145, 0.35);
+}
+
+.tech-bubble.database {
+    background-color: rgba(246, 173, 85, 0.15);
+    color: #f6ad55;
+    border: 1px solid rgba(246, 173, 85, 0.35);
+}
+
+.tech-bubble.devtools {
+    background-color: rgba(183, 148, 244, 0.15);
+    color: #b794f4;
+    border: 1px solid rgba(183, 148, 244, 0.35);
+}
+
+/* Project Description Toggle */
+.project-desc-toggle {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.6rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.project-desc-toggle:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.toggle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    user-select: none;
+}
+
+.toggle-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.project-desc-toggle.open .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-body {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    padding: 0 1rem;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.project-desc-toggle.open .toggle-body {
+    max-height: 200px;
+    padding: 0 1rem 1rem;
+}
+
 /* Contact Section & Footer */
 #contact {
     justify-content: space-between;
