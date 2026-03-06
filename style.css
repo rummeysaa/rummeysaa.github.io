@@ -182,9 +182,12 @@ h2::after {
 
 .profile-icon-hero {
     font-size: 6rem;
-    /* Adjust size to fit in circle */
     color: var(--primary-color);
     filter: drop-shadow(0 0 10px rgba(99, 179, 237, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 .social-links {
