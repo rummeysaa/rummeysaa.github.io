@@ -462,13 +462,12 @@ h2::after {
     border: 1px solid rgba(183, 148, 244, 0.35);
 }
 
-/* Project Description Toggle */
+/* Project Description Toggle - Pure HTML details/summary */
 .project-desc-toggle {
     background-color: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.6rem;
     margin-bottom: 1.2rem;
-    cursor: pointer;
     overflow: hidden;
     transition: border-color 0.3s ease;
 }
@@ -477,7 +476,7 @@ h2::after {
     border-color: rgba(255, 255, 255, 0.25);
 }
 
-.toggle-header {
+.project-desc-toggle summary.toggle-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -485,31 +484,31 @@ h2::after {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--primary-color);
+    cursor: pointer;
     user-select: none;
+    list-style: none;
 }
 
-.toggle-icon {
+.project-desc-toggle summary.toggle-header::-webkit-details-marker {
+    display: none;
+}
+
+.project-desc-toggle summary.toggle-header::after {
+    content: '▾';
     font-size: 1rem;
     transition: transform 0.3s ease;
     display: inline-block;
 }
 
-.project-desc-toggle.open .toggle-icon {
+.project-desc-toggle[open] summary.toggle-header::after {
     transform: rotate(180deg);
 }
 
 .toggle-body {
-    max-height: 0;
-    overflow: hidden;
     font-size: 0.92rem;
     color: var(--text-muted);
-    padding: 0 1rem;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-.project-desc-toggle.open .toggle-body {
-    max-height: 200px;
     padding: 0 1rem 1rem;
+    line-height: 1.6;
 }
 
 /* Contact Section & Footer */
