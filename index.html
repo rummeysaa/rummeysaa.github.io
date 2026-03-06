@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rümeysa Kaplan | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome & Ionicons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h3>RÜMEYSA KAPLAN</h3>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">RK</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Hi, I'm <span>Rümeysa Kaplan</span></h1>
+            <p class="subtitle fade-in delay-1">Software Engineer & Front-end Developer</p>
+            <div class="social-links fade-in delay-2">
+                <a href="#" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="#" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="mailto:email@example.com"><ion-icon name="mail-outline"></ion-icon></a>
+            </div>
+            <a href="#about" class="scroll-down fade-in delay-3">
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2 class="slide-up">About Me</h2>
+            <div class="about-grid slide-up delay-1">
+                <div class="about-text">
+                    <p>I am passionate about crafting beautiful, intuitive, and dynamic user interfaces. I specialize in
+                        front-end development and love turning complex problems into simple, elegant solutions.</p>
+                </div>
+                <div class="about-image-placeholder">
+                    <span>Profile Image<br>(Place profile.png here)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="section-content">
+            <h2 class="slide-up">Education</h2>
+            <div class="card slide-up delay-1">
+                <div class="card-icon"><ion-icon name="school-outline"></ion-icon></div>
+                <div class="card-info">
+                    <h3>University Name</h3>
+                    <p class="degree">Degree, Field of Study</p>
+                    <p class="date">Graduation Year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="section-content">
+            <h2 class="slide-up">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card slide-up delay-1">
+                    <h3>Project Name 1</h3>
+                    <p>A brief description of what this project does and the technologies used.</p>
+                    <a href="#" class="view-btn">View Project</a>
+                </div>
+                <div class="project-card slide-up delay-2">
+                    <h3>Project Name 2</h3>
+                    <p>A brief description of what this project does and the technologies used.</p>
+                    <a href="#" class="view-btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-content">
+            <h2 class="slide-up">Get In Touch</h2>
+            <address class="contact-box slide-up delay-1">
+                <p><strong><ion-icon name="location-outline"></ion-icon> Location:</strong> Your City, Turkey</p>
+                <p><strong><ion-icon name="mail-outline"></ion-icon> Email:</strong> <a
+                        href="mailto:email@example.com">email@example.com</a></p>
+                <p><strong><ion-icon name="globe-outline"></ion-icon> Website:</strong> <a
+                        href="https://rummeysaa.github.io/" target="_blank">rummeysaa.github.io</a></p>
+            </address>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Rümeysa Kaplan. Built with passion.</p>
+        </footer>
+    </section>
+
+    <!-- Scripts for Icons and Animations -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: remove unobserve if you want animation every time you scroll past
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
+
 </html>
