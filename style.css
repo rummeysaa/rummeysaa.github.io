@@ -143,7 +143,7 @@ h2::after {
 
 .role-badge {
     display: inline-block;
-    background-color: rgba(16, 185, 129, 0.15);
+    background-color: rgba(255, 255, 255, 0.15);
     /* Light blue background */
     color: var(--primary-color);
     padding: 0.5rem 1.2rem;
@@ -151,7 +151,7 @@ h2::after {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 2.5rem;
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .profile-img-container {
@@ -166,7 +166,7 @@ h2::after {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--primary-color);
-    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
     background-color: var(--surface-color);
     /* Fallback when image is missing */
 }
@@ -258,13 +258,13 @@ h2::after {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(16, 185, 129, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .card-icon {
     font-size: 3rem;
     color: var(--primary-color);
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 1rem;
     border-radius: 50%;
 }
@@ -305,7 +305,7 @@ h2::after {
 
 .project-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(16, 185, 129, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .project-card h3 {
@@ -322,7 +322,7 @@ h2::after {
 .view-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: rgba(16, 185, 129, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
