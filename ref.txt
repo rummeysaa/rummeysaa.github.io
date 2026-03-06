@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <img src="profile.png" alt="Dr. Rukiye Savran Kızıltepe" class="profile-img">
+    <title>Dr. Rukiye Savran Kızıltepe | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dr. Rukiye Savran Kızıltepe</h1>
+        <p>Artificial Intelligence | Machine Learning | Deep Learning | Computer Vision | Natural Language Processing </p>
+        <div class="contact-item">
+        <a class="social-icon" href="https://scholar.google.com/citations?user=IdicMRsAAAAJ&hl=en" target="_blank">
+            <ion-icon name="school-outline"></ion-icon>
+        </a>
+        <a class="social-icon" href="https://www.linkedin.com/in/rukiye-savran-kiziltepe/" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a class="social-icon" href="mailto:rukiye.savran.kiziltepe@ankara.edu.tr" target="_blank">
+            <ion-icon name="mail-outline"></ion-icon>
+        </a>
+    </div>
+
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
+        <h2>About</h2>
+        <p>Hello! I am Dr. Rukiye Savran Kızıltepe, currently working as an Assistant Professor in the Department of Software Engineering at Ankara University. I completed my Ph.D. in Computer Science at the University of Essex, United Kingdom. My research focuses on machine learning, natural language processing, and computer vision. I am passionate about developing AI technologies that can help solve real-world problems. Besides research, I enjoy collaborating on interdisciplinary projects and mentoring students interested in AI. Thank you for visiting my page!</p>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Ph.D. in Computer Science</h3>
+            <p>University of Essex, United Kingdom</p>
+        </div>
+        <div class="education-item">
+            <h3>M.Sc. in Advanced Computer Science</h3>
+            <p>University of Essex, United Kingdom</p>
+        </div>
+        <div class="education-item">
+            <h3>B.Sc. in Computer Education and Instructional Technology</h3>
+            <p>Hacettepe University, Turkey</p>
+        </div>
+    </section>
+    
+    <section id="publications">
+        <h2>Publications</h2>
+    
+        <div class="publication-item">
+            <p class="publication-title">"Integration of feature and decision fusion with deep learning architectures for video classification"</p>
+            <p class="publication-details">IEEE Access, 2024.</p>
+        </div>
+    
+        <div class="publication-item">
+            <p class="publication-title">"A novel keyframe extraction method for video classification using deep neural networks"</p>
+            <p class="publication-details">Neural Computing and Applications, 2023.</p>
+        </div>
+    
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <address>
+            <p><strong>Dr. Rukiye Savran Kızıltepe</strong></p>
+            <p>Ankara University, Faculty of Engineering<br>
+            Department of Software Engineering<br>
+            Ankara, Turkey</p>
+            <p><strong>Email:</strong> <a href="mailto:rukiye.savran.kiziltepe@ankara.edu.tr">rukiye.savrankiziltepe@ankara.edu.tr</a></p>
+            <p><strong>Website:</strong> <a href="https://your-personal-website.com" target="_blank">your-personal-website.com</a></p>
+        </address>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Dr. Rukiye Savran Kızıltepe | All Rights Reserved.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

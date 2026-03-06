@@ -1,0 +1,152 @@
+/* Color Theme Swatches in Hex */
+:root {
+    --primary-color: #0B261A;;
+    --secondary-color: #19402E;
+    --accent-color: #012611;
+    --dark-color: #000D06;
+    --highlight-color: #D9D3C1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: var(--highlight-color);
+    color: white;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    color: var(--dark-color);
+}
+
+h2 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: var(--accent-color);
+    color: white;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+.social-icon {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--highlight-color);
+}
+
+
+address a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+address a:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}
+
+address {
+    background: var(--dark-color); /* koyu arkaplan */
+    padding: 20px;
+    border-radius: 8px;
+    color: #f4f4f4; /* Açık renk yazı */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.6;
+}
+/* Header içindeki sosyal medya ikonlarını yatay hizala */
+header .contact-item {
+    display: inline-block; /* Her biri satır içinde yan yana */
+    margin: 0 10px; /* Aralarına boşluk */
+}
+
+.social-icon {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    font-size: 32px; /* İkon büyüklüğü */
+    color: white; /* İkon rengi */
+    margin: 0 10px; /* İkonlar arası boşluk */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--highlight-color); /* Hover ile renk değişimi */
+}
