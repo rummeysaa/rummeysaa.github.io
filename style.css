@@ -163,21 +163,29 @@ h2::after {
 }
 
 .profile-img-container {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
+    width: 220px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 40px rgba(99, 179, 237, 0.4);
+    position: relative;
+    background-color: var(--bg-color);
 }
 
 .profile-img-hero {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    background-color: var(--surface-color);
-    padding: 2px;
-    /* Extra space to reveal the image's internal border if any */
-    box-shadow: 0 0 30px rgba(99, 179, 237, 0.2);
+    transform: scale(1.7);
+    /* Heavily zoomed to ensure no original crop borders are seen */
+    transform-origin: center 48%;
+    /* Centered on the face */
 }
 
 .social-links {
