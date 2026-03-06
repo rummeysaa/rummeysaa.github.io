@@ -166,6 +166,8 @@ h2::after {
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    /* Vertically center the icon */
     width: 220px;
     height: 220px;
     margin-left: auto;
