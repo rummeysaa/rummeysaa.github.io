@@ -544,22 +544,65 @@ input:checked+.slider:before {
     border: 1px solid rgba(183, 148, 244, 0.35);
 }
 
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1.5px solid var(--primary-color);
+}
+
+.github-link:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 96, 156, 0.3);
+}
+
+.github-link ion-icon {
+    font-size: 1.2rem;
+}
+
 /* Project Details - Projeyi Incele toggle */
 .project-details {
     margin-top: auto;
 }
 
+.project-details {
+    flex: 1;
+    min-width: 200px;
+}
+
 .project-details summary.view-btn {
-    display: block;
-    padding: 0.8rem 1.5rem;
-    background-color: rgba(156, 178, 194, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
     color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
     font-weight: 600;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     text-align: center;
     cursor: pointer;
     list-style: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
     user-select: none;
 }
 
@@ -571,6 +614,7 @@ input:checked+.slider:before {
 .project-details[open] summary.view-btn {
     background-color: var(--primary-color);
     color: #fff;
+    transform: translateY(-2px);
 }
 
 .project-desc {
@@ -580,6 +624,7 @@ input:checked+.slider:before {
     line-height: 1.7;
     border-top: 1px solid var(--border-color);
     padding-top: 1rem;
+    text-align: left;
 }
 
 /* Project Description Toggle - Pure HTML details/summary */
@@ -694,24 +739,6 @@ input:checked+.slider:before {
     padding-bottom: 0.2rem;
 }
 
-.skill-tag {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--bubble-bg);
-    color: var(--primary-color);
-    border: 1px solid rgba(67, 96, 156, 0.2);
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-bottom: 0.2rem;
-}
-
-.skill-tag:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-    transform: scale(1.05);
-}
 
 /* Row 1 & 2 animations removed */
 @keyframes scroll-left {
