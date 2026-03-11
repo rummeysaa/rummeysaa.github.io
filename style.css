@@ -677,6 +677,23 @@ input:checked+.slider:before {
     justify-content: center;
 }
 
+.skill-group {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.group-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.2rem;
+}
+
 .skill-tag {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -687,6 +704,7 @@ input:checked+.slider:before {
     font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.3s ease;
+    margin-bottom: 0.2rem;
 }
 
 .skill-tag:hover {
