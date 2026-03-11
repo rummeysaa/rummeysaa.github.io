@@ -1,23 +1,30 @@
-/* Premium Dark Blue Theme with Light Steel Blue Accents & White Glows */
 :root {
-    --bg-color: #020617;
-    /* Very deep dark blue */
-    --surface-color: #0f172a;
-    /* Slightly lighter deep blue for cards */
-    --primary-color: hwb(214 61% 24%);
-    /* User requested blue */
-    --primary-hover: hwb(214 51% 14%);
-    /* Slightly darker hover */
-    --text-color: #f8fafc;
-    /* Standard white text */
-    --text-muted: #cbd5e1;
-    /* Lighter slate text */
-    --nav-bg: rgba(2, 6, 23, 0.85);
-    /* Transparent deep blue */
+    /* Light Theme (Default variables) */
+    --bg-color: #f8fafc;
+    --surface-color: #ffffff;
+    --primary-color: #43609C;
+    /* Specific Blue requested */
+    --primary-hover: #354d7d;
+    --text-color: #0f172a;
+    --text-muted: #475569;
+    --nav-bg: rgba(248, 250, 252, 0.85);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --bubble-bg: rgba(67, 96, 156, 0.1);
+}
 
-    /* The requested white glows */
-    --white-glow-box: 0 0 15px rgba(255, 255, 255, 0.15);
-    --white-glow-text: 0 0 10px rgba(255, 255, 255, 0.4);
+[data-theme="dark"] {
+    /* Dark Theme */
+    --bg-color: #020617;
+    --surface-color: #0f172a;
+    --primary-color: hwb(214 61% 24%);
+    --primary-hover: hwb(214 51% 14%);
+    --text-color: #f8fafc;
+    --text-muted: #cbd5e1;
+    --nav-bg: rgba(2, 6, 23, 0.85);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --bubble-bg: rgba(99, 179, 237, 0.15);
 }
 
 /* Global Reset & Base Styles */
@@ -80,7 +87,7 @@ h2::after {
     background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
@@ -106,6 +113,67 @@ h2::after {
 
 .nav-links a:hover {
     color: var(--primary-color);
+}
+
+/* Theme Switcher */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 54px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #334155;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 22px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 22px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.slider .sun,
+.slider .moon {
+    font-size: 14px;
+    color: #f1f5f9;
+}
+
+input:checked+.slider {
+    background-color: var(--primary-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
 }
 
 /* Sections Structure */
@@ -159,7 +227,7 @@ h2::after {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 2.5rem;
-    border: 1px solid rgba(156, 178, 194, 0.3);
+    border: 1px solid var(--border-color);
 }
 
 .profile-img-container {
@@ -175,7 +243,7 @@ h2::after {
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--primary-color);
-    box-shadow: 0 0 40px rgba(99, 179, 237, 0.4);
+    box-shadow: 0 0 40px rgba(67, 96, 156, 0.4);
     position: relative;
     background-color: var(--bg-color);
 }
@@ -183,7 +251,7 @@ h2::after {
 .profile-icon-hero {
     font-size: 6rem;
     color: var(--primary-color);
-    filter: drop-shadow(0 0 10px rgba(99, 179, 237, 0.5));
+    filter: drop-shadow(0 0 10px rgba(67, 96, 156, 0.5));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,7 +332,7 @@ h2::after {
     content: '';
     position: absolute;
     width: 4px;
-    background-color: rgba(156, 178, 194, 0.2);
+    background-color: var(--border-color);
     top: 0;
     bottom: 0;
     left: 40px;
@@ -308,9 +376,10 @@ h2::after {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid var(--border-color);
     position: relative;
+    box-shadow: var(--card-shadow);
 }
 
 /* Triangle pointer pointing to the dot */
@@ -339,11 +408,11 @@ h2::after {
 
 .timeline-content.card:hover {
     transform: translateX(10px);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--primary-color);
 }
 
 .timeline-content.card:hover::after {
-    border-color: transparent rgba(255, 255, 255, 0.3) transparent transparent;
+    border-color: transparent var(--primary-color) transparent transparent;
 }
 
 .card-icon {
@@ -367,7 +436,8 @@ h2::after {
     color: var(--text-color);
 }
 
-.card-info .date {
+.card-info .date,
+.card-info .gano {
     font-size: 0.9rem;
     color: var(--primary-color);
     font-weight: 600;
@@ -385,16 +455,17 @@ h2::after {
     background-color: var(--surface-color);
     padding: 2rem;
     border-radius: 1rem;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid var(--border-color);
     /* White glow background template */
     display: flex;
     flex-direction: column;
+    box-shadow: var(--card-shadow);
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--primary-color);
 }
 
 .project-card h3 {
@@ -450,9 +521,9 @@ h2::after {
 }
 
 .tech-bubble.frontend {
-    background-color: rgba(99, 179, 237, 0.15);
-    color: #63b3ed;
-    border: 1px solid rgba(99, 179, 237, 0.35);
+    background-color: var(--bubble-bg);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 .tech-bubble.backend {
@@ -507,7 +578,7 @@ h2::after {
     font-size: 0.95rem;
     color: var(--text-muted);
     line-height: 1.7;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--border-color);
     padding-top: 1rem;
 }
 
@@ -560,76 +631,84 @@ h2::after {
     line-height: 1.6;
 }
 
-/* Skills Marquee Section */
-.skills-section {
-    min-height: unset;
-    padding: 80px 0;
-    overflow: hidden;
-}
-
-.skills-section .section-content {
+/* Skills Grid Redesign */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 0 5%;
-    margin-bottom: 2.5rem;
 }
 
-.skills-subtitle {
-    color: var(--text-muted);
-    font-size: 1rem;
-    margin-top: -1rem;
-    margin-bottom: 0;
+.skill-category-card {
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: center;
 }
 
-.marquee-wrapper {
-    position: relative;
-    overflow: hidden;
-    /* Fade edges */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+.skill-category-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
 }
 
-.marquee-track {
+.category-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
     display: flex;
-    width: max-content;
+    justify-content: center;
 }
 
-.marquee-items {
+.skill-category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.skill-tags {
     display: flex;
-    gap: 1.5rem;
-    padding: 0 0.75rem;
-    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
 }
 
-/* LEFT scroll animation */
-.marquee-left {
-    animation: scroll-left 40s linear infinite;
+.skill-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--bubble-bg);
+    color: var(--primary-color);
+    border: 1px solid rgba(67, 96, 156, 0.2);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.marquee-left:hover {
-    animation-play-state: paused;
+.skill-tag:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: scale(1.05);
 }
 
-/* RIGHT scroll animation */
-.marquee-right {
-    animation: scroll-right 40s linear infinite;
-}
-
-.marquee-right:hover {
-    animation-play-state: paused;
-}
-
+/* Row 1 & 2 animations removed */
 @keyframes scroll-left {
     0% {
         transform: translateX(0);
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(0);
     }
 }
 
 @keyframes scroll-right {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(0);
     }
 
     100% {
@@ -637,42 +716,6 @@ h2::after {
     }
 }
 
-/* Skill Bubbles (Simple text pills) */
-.skill-tag {
-    display: inline-block;
-    padding: 0.65rem 1.6rem;
-    background-color: rgba(99, 179, 237, 0.1);
-    color: #63b3ed;
-    border: 1.5px solid rgba(99, 179, 237, 0.4);
-    border-radius: 50px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-    cursor: default;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.skill-tag:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: #fff;
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(99, 179, 237, 0.4);
-}
-
-.skill-tag.alt {
-    background-color: rgba(183, 148, 244, 0.1);
-    color: #b794f4;
-    border-color: rgba(183, 148, 244, 0.4);
-}
-
-.skill-tag.alt:hover {
-    background-color: #b794f4;
-    border-color: #b794f4;
-    color: #fff;
-    box-shadow: 0 10px 30px rgba(183, 148, 244, 0.4);
-}
 
 /* Contact Section & Footer */
 
@@ -686,7 +729,8 @@ h2::after {
     border-radius: 1rem;
     font-style: normal;
     font-size: 1.1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
     /* White glow background template */
 }
 

@@ -27,6 +27,15 @@
             <li><a href="#skills">Yetenekler</a></li>
             <li><a href="#contact">İletişim</a></li>
         </ul>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider">
+                    <ion-icon name="sunny-outline" class="sun"></ion-icon>
+                    <ion-icon name="moon-outline" class="moon"></ion-icon>
+                </div>
+            </label>
+        </div>
     </nav>
 
     <!-- Home Section -->
@@ -82,6 +91,7 @@
                         <div class="card-info">
                             <h3>Ankara Üniversitesi</h3>
                             <p class="degree">Yazılım Mühendisliği, Mühendislik Fakültesi</p>
+                            <p class="gano"><strong>GANO:</strong> 3.10 / 4.00</p>
                             <p class="date">2023-2027</p>
                         </div>
                     </div>
@@ -157,58 +167,12 @@
             <h2>Yetenekler</h2>
         </div>
 
-        <!-- Row 1: scrolls LEFT -->
-        <div class="marquee-wrapper">
-            <div class="marquee-track marquee-left">
-                <div class="marquee-items">
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                </div>
-                <!-- Duplicate for seamless loop -->
-                <div class="marquee-items" aria-hidden="true">
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
+        <div class="skills-grid">
+            <!-- Category 1: Database -->
+            <div class="skill-category-card">
+                <div class="category-icon"><ion-icon name="server-outline"></ion-icon></div>
+                <h3>Veritabanı Yönetimi</h3>
+                <div class="skill-tags">
                     <span class="skill-tag">Microsoft SQL Server</span>
                     <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">MongoDB</span>
@@ -216,65 +180,42 @@
                     <span class="skill-tag">SQLite</span>
                 </div>
             </div>
-        </div>
 
-        <!-- Row 2: scrolls RIGHT -->
-        <div class="marquee-wrapper" style="margin-top: 1.5rem;">
-            <div class="marquee-track marquee-right">
-                <div class="marquee-items">
+            <!-- Category 2: Data Analysis -->
+            <div class="skill-category-card">
+                <div class="category-icon"><ion-icon name="analytics-outline"></ion-icon></div>
+                <h3>Veri Analizi & Araçlar</h3>
+                <div class="skill-tags">
                     <span class="skill-tag alt">Microsoft Power BI</span>
                     <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
+                    <span class="skill-tag alt">Jupyter Notebook</span>
                 </div>
-                <!-- Duplicate for seamless loop -->
-                <div class="marquee-items" aria-hidden="true">
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
-                    <span class="skill-tag alt">Microsoft Power BI</span>
-                    <span class="skill-tag alt">Python</span>
-                    <span class="skill-tag alt">HTML</span>
-                    <span class="skill-tag alt">CSS</span>
-                    <span class="skill-tag alt">JavaScript</span>
+            </div>
+
+            <!-- Category 3: Development -->
+            <div class="skill-category-card">
+                <div class="category-icon"><ion-icon name="code-slash-outline"></ion-icon></div>
+                <h3>Yazılım Geliştirme</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5 / CSS3</span>
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">C#</span>
+                </div>
+            </div>
+
+            <!-- Category 4: Tools & Collaboration -->
+            <div class="skill-category-card">
+                <div class="category-icon"><ion-icon name="construct-outline"></ion-icon></div>
+                <h3>Araçlar & İşbirliği</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag alt">Git & GitHub</span>
+                    <span class="skill-tag alt">VS Code</span>
+                    <span class="skill-tag alt">Postman</span>
+                    <span class="skill-tag alt">Trello</span>
+                    <span class="skill-tag alt">Google Drive</span>
                 </div>
             </div>
         </div>
@@ -290,7 +231,8 @@
         <div class="section-content">
             <h2>İletişim</h2>
             <address class="contact-box">
-                <p><strong><ion-icon name="location-outline"></ion-icon> Adres:</strong> Ankara, Türkiye</p>
+                <p><strong><ion-icon name="location-outline"></ion-icon> Adres:</strong> Ankara Üniversitesi, Türkiye
+                </p>
                 <p><strong><ion-icon name="mail-outline"></ion-icon> E-posta:</strong> <a
                         href="mailto:rumeysaakaplan0@gmail.com">rumeysaakaplan0@gmail.com</a></p>
                 <p><strong><ion-icon name="logo-linkedin"></ion-icon> LinkedIn:</strong> <a
@@ -307,6 +249,32 @@
     <!-- Scripts for Icons (External libraries, acceptable in HTML/CSS only assignments usually, but we will keep them as requested) -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        let currentTheme = localStorage.getItem('theme');
+
+        // If no theme is set or it's 'light', ensure it starts light
+        if (!currentTheme || currentTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            toggleSwitch.checked = false;
+        } else if (currentTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleSwitch.checked = true;
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
 </body>
 
 </html>
