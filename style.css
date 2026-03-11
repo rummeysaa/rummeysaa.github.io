@@ -546,46 +546,17 @@ input:checked+.slider:before {
 
 .project-actions {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: flex-start;
-    margin-top: 1.5rem;
-}
-
-.github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background-color: var(--primary-color);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 1.5px solid var(--primary-color);
-}
-
-.github-link:hover {
-    background-color: var(--primary-hover);
-    border-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(67, 96, 156, 0.3);
-}
-
-.github-link ion-icon {
-    font-size: 1.2rem;
-}
-
-/* Project Details - Projeyi Incele toggle */
-.project-details {
+    flex-direction: column;
+    gap: 0.75rem;
     margin-top: auto;
+    /* Pushes actions to the bottom of the card */
+    width: 100%;
 }
 
 .project-details {
-    flex: 1;
-    min-width: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
 }
 
 .project-details summary.view-btn {
@@ -593,7 +564,7 @@ input:checked+.slider:before {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 1.5rem;
     background-color: transparent;
     color: var(--primary-color);
     border: 1.5px solid var(--primary-color);
@@ -604,6 +575,7 @@ input:checked+.slider:before {
     list-style: none;
     transition: all 0.3s ease;
     user-select: none;
+    font-size: 0.95rem;
 }
 
 .project-details summary.view-btn::-webkit-details-marker {
@@ -612,19 +584,47 @@ input:checked+.slider:before {
 
 .project-details summary.view-btn:hover,
 .project-details[open] summary.view-btn {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: rgba(67, 96, 156, 0.05);
     transform: translateY(-2px);
 }
 
 .project-desc {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* Space between desc and button */
     font-size: 0.95rem;
     color: var(--text-muted);
     line-height: 1.7;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
     text-align: left;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1.5px solid var(--primary-color);
+    width: 100%;
+}
+
+.github-link:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 96, 156, 0.3);
+}
+
+.github-link ion-icon {
+    font-size: 1.3rem;
 }
 
 /* Project Description Toggle - Pure HTML details/summary */
